@@ -1,315 +1,43 @@
-<!doctype html>
-<html lang="es">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Ministerio — Jesús es mi Pastor</title>
-<style>
-  :root{
-    --bg:#f7f8fa;
-    --card:#ffffff;
-    --accent:#145ea8;
-    --muted:#6b7280;
-    --glass: rgba(255,255,255,0.7);
-    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  }
-  *{box-sizing:border-box}
-  body{
-    margin:0;
-    background:linear-gradient(180deg,#f3f6fb 0%,var(--bg) 100%);
-    color:#111827;
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-    line-height:1.5;
-  }
-  .container{max-width:980px;margin:28px auto;padding:20px;}
-  header{
-    display:flex;gap:18px;align-items:center;
-    margin-bottom:18px;
-  }
-  .brand{
-    display:flex;align-items:center;gap:14px;
-  }
-  .avatar{
-    width:92px;height:92px;border-radius:12px;
-    overflow:hidden;flex:0 0 92px;
-    box-shadow:0 6px 18px rgba(16,24,40,0.08);
-    background:var(--card);
-  }
-  .avatar img{width:100%;height:100%;object-fit:cover;display:block}
-  h1{font-size:1.5rem;margin:0}
-  .tagline{color:var(--muted);font-size:0.95rem;margin-top:6px}
-  nav{margin-left:auto}
-  nav a{color:var(--accent);text-decoration:none;font-weight:600;margin-left:12px;font-size:0.95rem}
-  main{display:grid;grid-template-columns:1fr;gap:18px;margin-top:18px}
-  .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(16,24,40,0.04)}
-  .hero{
-    display:flex;gap:18px;align-items:center;padding:18px;border-radius:12px;
-    background:linear-gradient(90deg, rgba(20,94,168,0.06), rgba(20,94,168,0.02));
-  }
-  .hero-left{flex:1}
-  .mission{font-size:1.05rem;color:#0f172a}
-  .lead{color:var(--muted);margin-top:8px}
-  .actions{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap}
-  .btn{
-    display:inline-block;padding:10px 14px;border-radius:8px;
-    text-decoration:none;font-weight:600;
-  }
-  .btn-primary{background:var(--accent);color:white}
-  .btn-ghost{border:1px solid rgba(20,94,168,0.12);color:var(--accent);background:transparent}
-  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-  .section-title{display:flex;align-items:center;gap:10px;margin-bottom:10px}
-  .section-title h2{margin:0;font-size:1.05rem}
-  .muted{color:var(--muted);font-size:0.95rem}
-  ul.clean{padding-left:18px;margin:0}
-  footer{margin-top:22px;text-align:center;color:var(--muted);font-size:0.9rem}
-  @media (max-width:820px){
-    .grid{grid-template-columns:1fr}
-    header{flex-direction:column;align-items:flex-start;gap:12px}
-    nav{margin-left:0}
-  }
-  .meta{font-size:0.9rem;color:var(--muted)}
-  .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--glass);font-weight:600;color:var(--accent);font-size:0.86rem}
-  .socials a{margin-right:10px;color:var(--muted);text-decoration:none;font-weight:700}
-  .contact-row{display:flex;gap:10px;flex-wrap:wrap}
-  input, textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ef;font-size:0.95rem}
-  textarea{min-height:120px;resize:vertical}
-</style>
-</head>
-<body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="avatar" aria-hidden="true">
-          <img src="https://i.postimg.cc/brY2THTn/IMG-3216.jpg" alt="Foto del ministerio - Jesús es mi Pastor">
-        </div>
-        <div>
-          <h1>Ministerio — Jesús es mi Pastor</h1>
-          <div class="tagline">Somos una iglesia llamada a restaurar las vidas con la ayuda e inspiración del Espíritu Santo.</div>
-        </div>
-      </div>
-
-      <nav aria-label="Navegación principal">
-        <a href="#sobre">Sobre</a>
-        <a href="#ministerios">Ministerios</a>
-        <a href="#equipo">Equipo</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="card hero" id="inicio">
-        <div class="hero-left">
-          <div class="pill">Público</div>
-          <h2 style="margin-top:10px">Ministerio: Jesús es mi Pastor</h2>
-          <p class="mission">Somos una iglesia llamada a restaurar las vidas con la ayuda y la inspiración del Espíritu Santo.</p>
-          <p class="lead">Creemos en la restauración real y duradera: oración, comunidad y servicio como caminos para transformar corazones.</p>
-
-          <div class="actions">
-            <a class="btn btn-primary" href="#contacto">Contactar</a>
-            <a class="btn btn-ghost" href="#ministerios">Ver ministerios</a>
-          </div>
-        </div>
-
-        <div class="meta" style="min-width:180px;text-align:center">
-          <div style="font-weight:700;margin-bottom:8px">Únete a nosotros</div>
-          <div class="muted">Servicio semanal — Domingo 10:00</div>
-          <div style="margin-top:12px" class="socials">
-            <a href="#">FB</a>
-            <a href="#">X</a>
-            <a href="#">IG</a>
-          </div>
-        </div>
-      </section>
-
-      <section id="sobre" class="card">
-        <div class="section-title">
-          <h2>Sobre nosotros</h2>
-        </div>
-        <p>
-          <strong>Ministerio Jesús es mi Pastor</strong> nació con el propósito de llevar esperanza y restauración.
-          Acompañamos a personas en procesos de sanidad emocional, espiritual y social mediante acompañamiento pastoral, grupos pequeños, y proyectos comunitarios.
-        </p>
-        <p class="muted">Nuestra inspiración: la Palabra, la oración y el poder transformador del Espíritu Santo.</p>
-      </section>
-
-      <div class="grid">
-        <section id="ministerios" class="card">
-          <div class="section-title">
-            <h2>Ministerios y actividades</h2>
-          </div>
-          <ul class="clean">
-            <li><strong>Restauración personal:</strong> acompañamiento espiritual y consejería en grupos.</li>
-            <li><strong>Escuela de ministerios:</strong> formación para liderazgo y servicio.</li>
-            <li><strong>Acción social:</strong> proyectos comunitarios, alimentos y apoyo a familias vulnerables.</li>
-          </ul>
-        </section>
-
-        <section id="equipo" class="card">
-          <div class="section-title">
-            <h2>Equipo</h2>
-          </div>
-          <p class="muted">Líderes y voluntarios — plantilla editable</p>
-          <ul class="clean">
-            <li><strong>Pastor/a Nombre Apellido</strong> — Pastoral & predicación.</li>
-            <li><strong>Coordinador/a de ministerios</strong> — Organiza grupos y formación.</li>
-            <li><strong>Equipo de apoyo</strong> — Voluntariado y logística.</li>
-          </ul>
-        </section>
-      </div>
-
-      <section id="contacto" class="card">
-        <div class="section-title">
-          <h2>Contacto</h2>
-        </div>
-
-        <p class="muted">Escribe y te responderemos.</p>
-
-        <form action="mailto:contacto@ministerio-jesus.org" method="GET" enctype="text/plain">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px">
-            <input type="text" name="Nombre" placeholder="Tu nombre" required>
-            <input type="email" name="Email" placeholder="Tu correo" required>
-          </div>
-          <textarea name="Mensaje" placeholder="Tu mensaje" required></textarea>
-          <div style="margin-top:10px;display:flex;gap:10px">
-            <button type="submit" class="btn btn-primary">Enviar mensaje</button>
-            <a class="btn btn-ghost" href="mailto:contacto@ministerio-jesus.org">Enviar por correo</a>
-          </div>
-        </form>
-
-      </section>
-    </main>
-
-    <footer>
-      <div>© <span id="year"></span> Ministerio — Jesús es mi Pastor</div>
-    </footer>
-  </div>
-
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-</body>
-</html>
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jesús es mi Pastor - JEMP</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ministerio Jesús es mi Pastor</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #0a1a2a;
-            color: white;
-        }
+    <link rel="stylesheet" href="styles.css">
 
-        /* ENCABEZADO */
-        header {
-            width: 100%;
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: absolute;
-            top: 0;
-            z-index: 20;
-        }
-
-        nav a {
-            margin: 0 18px;
-            color: #cce4ff;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: 500;
-        }
-
-        nav a:hover {
-            color: #ffffff;
-        }
-
-        /* PORTADA */
-        .hero {
-            width: 100%;
-            height: 100vh;
-            background: url("FONDO.jpg") center/cover no-repeat;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-shadow: 0px 0px 8px #000;
-            padding: 0 20px;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            font-weight: 900;
-            text-align: center;
-            margin-bottom: 20px;
-            color: #2da2ff;
-        }
-
-        .btn {
-            background: #022e63;
-            border: 2px solid #2da2ff;
-            padding: 14px 35px;
-            font-size: 22px;
-            border-radius: 40px;
-            color: #fff;
-            cursor: pointer;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        .btn:hover {
-            background: #004aad;
-        }
-
-        /* SECCIÓN LOGOS */
-        .logos {
-            padding: 60px 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 40px;
-        }
-
-        .logos img {
-            width: 260px;
-            height: auto;
-            filter: drop-shadow(0 0 8px #001e3c);
-        }
-    </style>
+    <!-- LOGO -->
+    <link rel="icon" type="image/png" href="logo_azul_jemp.png">
 </head>
 
 <body>
 
-    <!-- ENCABEZADO -->
-    <header>
-        <img src="logo_jemp.svg" width="90" />
-        <nav>
-            <a href="#">Nosotros</a>
-            <a href="#">Ministerios</a>
-            <a href="#">Servicios</a>
-            <a href="#">Donaciones</a>
-        </nav>
-    </header>
+<header class="header">
+    <img class="logo" src="logo_azul_jemp.png" alt="JEMP Logo">
 
-    <!-- PORTADA -->
-    <section class="hero">
-        <h1>SI MI PUEBLO SE HUMILLARE</h1>
+    <nav class="nav">
+        <a href="#">Nosotros</a>
+        <a href="#">Ministerios</a>
+        <a href="#">Servicios</a>
+        <a href="#">Donaciones</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>SI MI PUEBLO<br>SE HUMILLARE</h1>
         <a class="btn" href="#">Mirar ahora</a>
-    </section>
+    </div>
+</section>
 
-    <!-- LOGOS -->
-    <section class="logos">
-        <img src="logo1.svg" />
-        <img src="logo2.svg" />
-        <img src="logo3.svg" />
-        <img src="logo4.svg" />
-        <img src="logo5.svg" />
-    </section>
+<footer>
+    <p>© <span id="year"></span> Ministerio Jesús es mi Pastor</p>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
