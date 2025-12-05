@@ -1,191 +1,145 @@
-/* ===========================
-   Reset y tipografía
-   =========================== */
-* { box-sizing: border-box; }
-html, body { height: 100%; }
+/* Reset y tipografía */
+*{box-sizing:border-box}
 body{
-  margin: 0;
+  margin:0;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  background: linear-gradient(180deg, #071428 0%, #0b2233 100%); /* fondo global azul oscuro */
-  color: #E9F6FF; /* texto claro general */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  line-height: 1.5;
+  background: linear-gradient(180deg,#071428 0%, #09243a 100%); /* suave degradado oscuro */
+  color:#E9F6FF; /* texto claro */
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 
-/* Contenedor general */
-.wrap { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
-
-/* ===========================
-   Encabezado / Navbar
-   =========================== */
-.header, header, .encabezamiento { width: 100%; }
-.navbar {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 18px 24px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  background: rgba(3,12,20,0.18); /* translúcido para ver hero detrás */
+/* ENCABEZADO */
+.encabezamiento{
+  width:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:100;
+  background: rgba(3,12,22,0.35); /* translucidez */
   backdrop-filter: blur(6px);
+  padding:12px 20px;
 }
 
-.logo img { height: 56px; display: block; }
-
-/* Menu principal */
-.menu { list-style: none; margin: 0; padding: 0; display:flex; gap: 28px; align-items:center; }
-.menu li { display:inline; }
-.menu a {
-  color: #9fd8ff; /* azul claro */
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 16px;
-  opacity: 0.95;
-  transition: color .18s ease, opacity .18s ease;
+.navbar{
+  max-width:1100px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
-.menu a:hover { color: #d7f3ff; opacity: 1; }
 
-/* Iconos sociales (si los usas) */
-.header-icons { display:flex; gap:12px; align-items:center; }
+.logo-text{
+  font-weight:700;
+  letter-spacing:2px;
+  color:#9fd8ff; /* azul claro para logo textual */
+  font-size:20px;
+}
 
-/* ===========================
-   HERO (sección principal)
-   =========================== */
+/* Menu */
+.menu{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  gap:22px;
+}
+.menu a{
+  color:#9fd8ff; /* azul claro */
+  text-decoration:none;
+  font-weight:600;
+  opacity:0.95;
+  font-size:15px;
+}
+.menu a:hover{ opacity:1; transform:translateY(-1px); }
+
+/* HERO (sección principal) - SIN IMAGEN */
 .hero{
-  min-height: 72vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 120px 20px 60px;
-  background-image: url('hero-bg.png'); /* <<-- nombre exacto del archivo */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  overflow: hidden;
+  min-height:72vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:160px 20px 60px; /* espacio para el header fijo */
+  position:relative;
+  /* usamos solo degradado de fondo del body; si quieres otro degradado local, descomenta: */
+  /* background: linear-gradient(180deg, rgba(9,36,58,0.6), rgba(3,12,22,0.6)); */
 }
 
-/* capa oscura para mejorar legibilidad */
+/* capa oscura para legibilidad (ya el body tiene degradado, esto es opcional) */
 .hero::before{
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(3,12,20,0.55) 0%, rgba(3,12,20,0.65) 100%);
-  z-index: 1;
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(180deg, rgba(2,13,28,0.25), rgba(2,8,18,0.45));
+  z-index:1;
 }
 
-/* contenido dentro del hero */
-.hero .contenido{
-  position: relative;
-  z-index: 2;
-  max-width: 1100px;
-  width: 100%;
-  padding: 0 16px;
-  margin: 0 auto;
+/* contenido del hero (encima de la capa) */
+.hero-contenido{
+  position:relative;
+  z-index:2;
+  max-width:1100px;
+  width:100%;
 }
 
-/* Título principal (sin brillo) */
 .hero h1{
-  font-size: clamp(36px, 6vw, 96px);
-  margin: 0 0 10px;
-  color: #cfeeff; /* tono claro, suave */
-  font-weight: 800;
-  letter-spacing: .02em;
-  line-height: 1;
-  text-shadow: none; /* quitar brillo/efecto */
-  -webkit-text-stroke: 0;
-  filter: none;
+  font-size:56px;
+  line-height:1.02;
+  margin:0 0 14px;
+  color:#BFE9FF; /* azul suave, sin brillo */
+  font-weight:800;
+  letter-spacing:2px;
+  text-shadow:none; /* eliminar brillos */
 }
 
-/* Subtítulo/lead */
-.hero .lead{
-  font-size: clamp(14px, 2.4vw, 20px);
-  margin: 8px 0 22px;
-  color: rgba(239,246,255,0.9);
-  max-width: 820px;
-  margin-left: auto;
-  margin-right: auto;
+/* párrafo principal */
+.lead{
+  margin:0 0 22px;
+  color: #D8F2FF;
+  font-size:18px;
+  opacity:0.95;
 }
 
-/* Botón simple, sin fondo sólido */
-.btn-outline, .boton, .btn {
+/* CTA simple (enlace, no botón azul grande) */
+.cta-line .cta-link{
   display:inline-block;
-  padding: 12px 28px;
-  border-radius: 32px;
-  border: 2px solid rgba(255,255,255,0.18);
+  color:#cfefff;
+  text-decoration:underline;
+  font-weight:700;
+  padding:8px 10px;
+  border-radius:6px;
+  background:transparent; /* sin color fuerte */
+}
+
+/* Secciones interiores */
+.seccion{
+  max-width:1100px;
+  margin:40px auto;
+  padding:20px;
   background: rgba(255,255,255,0.02);
-  color: #e9f6ff;
-  text-decoration: none;
-  font-weight: 700;
-  letter-spacing: .01em;
-  box-shadow: none; /* quitar sombra azul */
-  transition: background .18s ease, border-color .18s ease, transform .12s ease;
+  border-radius:8px;
+  color:#E9F6FF;
 }
-.btn-outline:hover {
-  background: rgba(255,255,255,0.05);
-  border-color: rgba(255,255,255,0.34);
-  transform: translateY(-3px);
-}
-
-/* ===========================
-   Secciones / columnas inferiores
-   =========================== */
-.section-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 36px;
-  padding: 60px 16px;
-  max-width: 1200px;
-  margin: 0 auto 80px;
-}
-
-/* columnas de texto */
-.section-grid h3 { color: #9fd8ff; margin-bottom: 12px; font-size:18px; font-weight:700; }
-.section-grid p, .section-grid li { color: rgba(239,246,255,0.95); font-size:16px; }
 
 /* Footer */
-footer { padding: 28px 16px; text-align:center; color: rgba(239,246,255,0.8); }
-
-/* ===========================
-   Estilos globales de botones, enlaces y listas
-   =========================== */
-a { color: #9fd8ff; }
-a:hover { color: #d7f3ff; }
-
-/* Formularios y tarjetas (estética moderna) */
-.card{
-  background: rgba(255,255,255,0.02);
-  border-radius: 8px;
-  padding: 16px;
-  color: #e9f6ff;
-  box-shadow: 0 6px 22px rgba(3,12,20,0.45);
+.pie{
+  text-align:center;
+  padding:30px 10px;
+  color:#9fcff0;
+  opacity:0.9;
 }
 
-/* ===========================
-   Responsive
-   =========================== */
-@media (max-width: 900px){
-  .section-grid { grid-template-columns: 1fr; padding: 40px 12px; }
-  .menu { gap: 16px; }
-  .logo img { height: 48px; }
-  .navbar { padding: 12px 16px; }
-  .hero { padding: 100px 12px 50px; }
-  .hero h1 { font-size: clamp(28px, 10vw, 48px); }
+/* Responsive */
+@media (max-width:900px){
+  .hero h1{ font-size:40px; }
+  .menu{ gap:12px; }
+  .navbar{ padding:0; }
+  .encabezamiento{ padding:10px 12px; }
 }
-
-@media (max-width: 480px){
-  .menu { display: none; } /* usar menu hamburguesa si lo implementas */
-  .hero h1 { font-size: 30px; }
-  .hero .lead { font-size: 14px; }
+@media (max-width:480px){
+  .hero{ padding:130px 14px 40px; }
+  .hero h1{ font-size:30px; }
+  .lead{ font-size:15px; }
+  .menu{ display:none; } /* ocultar menú en móvil (puedes implementar un boton hamburguesa luego) */
 }
-
-/* ===========================
-   Utilidades rápidas
-   =========================== */
-.hidden { display:none !important; }
-.center { text-align:center; }
