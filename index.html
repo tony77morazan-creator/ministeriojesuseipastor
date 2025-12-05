@@ -1,17 +1,60 @@
-<encabezamiento clase="héroe" estilo="background-image: url('portada.jpg')">
-    <nav class="navbar">
-        <div class="logo">
-        <img src="logo.png" alt="Logo"> JESÚS ES MI PASTOR">
-        </div>
-        <ul class="menu">
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#ministerios">Ministerios</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#donaciones">Donaciones</a></li>
-        </ul>
-    </nav>
+<header class="encabezamiento">
+  <nav>
+    <div class="logo">
+      <img src="logo.png" alt="JEMP Logo">
+    </div>
+    <ul class="menu">
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#ministerios">Ministerios</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#donaciones">Donaciones</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <div class="hero-content">
+<section class="hero" id="inicio">
+  <div class="contenido">
+    <h1>SI MI PUEBLO SE HUMILLARE</h1>
+    <p class="lead">Creemos en la restauración. Ven y conoce nuestros ministerios, servicios y eventos.</p>
+
+    <!-- Botón simple: outline (si prefieres SIN botón, borra este <a>) -->
+    <a href="#servicios" class="btn-outline">Conoce más</a>
+  </div>
+</section>
+
+<!-- ejemplo de secciones inferiores -->
+<section class="secciones">
+  <div>
+    <h3>Nosotros</h3>
+    <ul>
+      <li>Historia</li>
+      <li>Biografía de pastores</li>
+    </ul>
+  </div>
+  <div>
+    <h3>Ministerios</h3>
+    <ul>
+      <li>Caballeros</li>
+      <li>Damas</li>
+      <li>Jóvenes</li>
+      <li>Danza</li>
+    </ul>
+  </div>
+  <div>
+    <h3>Servicios</h3>
+    <ul>
+      <li>Martes – Oración 7:00PM</li>
+      <li>Sábado – Jóvenes 6:20PM</li>
+      <li>Domingo – 8:00AM</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  © <span id="ano"></span> Ministerio — Jesús es mi Pastor · Síguenos en redes
+</footer>
+
+<script>document.getElementById('ano').textContent=new Date().getFullYear();</script>
         <h1>SI MI PUEBLO <br> SE HUMILLARE</h1>
         <a href="#video" class="btn">Mirar ahora</a>
     </div>
