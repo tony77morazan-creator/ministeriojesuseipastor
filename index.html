@@ -1,61 +1,70 @@
-<header class="encabezamiento">
-  <nav>
-    <div class="logo">
-      <img src="logo.png" alt="JEMP Logo">
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ministerio - Jesús es mi Pastor</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+
+  <header class="encabezamiento">
+    <nav class="navbar">
+      <div class="logo">
+        <!-- Si ya tienes logo: <img src="logo.png" alt="JEMP Logo"> -->
+        <div class="logo-text">JEMP</div>
+      </div>
+      <ul class="menu">
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#ministerios">Ministerios</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#donaciones">Donaciones</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO (sin imágenes) -->
+  <section class="hero" id="inicio">
+    <div class="hero-contenido">
+      <h1>SI MI PUEBLO SE HUMILLARE</h1>
+      <p class="lead">Creemos en la restauración, la oración y la comunidad.</p>
+
+      <!-- botón sustituido por enlace simple (sin botón azul grande) -->
+      <p class="cta-line"><a href="#servicios" class="cta-link">Ver más</a></p>
     </div>
-    <ul class="menu">
-      <li><a href="#nosotros">Nosotros</a></li>
-      <li><a href="#ministerios">Ministerios</a></li>
-      <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#donaciones">Donaciones</a></li>
-    </ul>
-  </nav>
-</header>
+  </section>
 
-<section class="hero" id="inicio">
-  <div class="contenido">
-    <h1>SI MI PUEBLO SE HUMILLARE</h1>
-    <p class="lead">Creemos en la restauración. Ven y conoce nuestros ministerios, servicios y eventos.</p>
+  <!-- Secciones de ejemplo -->
+  <main>
+    <section id="nosotros" class="seccion">
+      <h2>Nosotros</h2>
+      <p>Historia y biografía de los pastores.</p>
+    </section>
 
-    <!-- Botón simple: outline (si prefieres SIN botón, borra este <a>) -->
-    <a href="#servicios" class="btn-outline">Conoce más</a>
-  </div>
-</section>
+    <section id="ministerios" class="seccion">
+      <h2>Ministerios</h2>
+      <ul>
+        <li>Caballeros</li>
+        <li>Damas</li>
+        <li>Jóvenes</li>
+        <li>Danza</li>
+      </ul>
+    </section>
 
-<!-- ejemplo de secciones inferiores -->
-<section class="secciones">
-  <div>
-    <h3>Nosotros</h3>
-    <ul>
-      <li>Historia</li>
-      <li>Biografía de pastores</li>
-    </ul>
-  </div>
-  <div>
-    <h3>Ministerios</h3>
-    <ul>
-      <li>Caballeros</li>
-      <li>Damas</li>
-      <li>Jóvenes</li>
-      <li>Danza</li>
-    </ul>
-  </div>
-  <div>
-    <h3>Servicios</h3>
-    <ul>
-      <li>Martes – Oración 7:00PM</li>
-      <li>Sábado – Jóvenes 6:20PM</li>
-      <li>Domingo – 8:00AM</li>
-    </ul>
-  </div>
-</section>
+    <section id="servicios" class="seccion">
+      <h2>Servicios</h2>
+      <p>Martes - Oración 7:00PM · Miércoles - Damas/Caballeros 7:00PM · Sábado - Jóvenes 6:20PM</p>
+    </section>
 
-<footer>
-  © <span id="ano"></span> Ministerio — Jesús es mi Pastor · Síguenos en redes
-</footer>
+    <section id="donaciones" class="seccion">
+      <h2>Donaciones</h2>
+      <p>Información para donar y apoyar la obra.</p>
+    </section>
+  </main>
 
-<script>document.getElementById('ano').textContent=new Date().getFullYear();</script>
-        <h1>SI MI PUEBLO <br> SE HUMILLARE</h1>
-        <a href="#video" class="btn">Mirar ahora</a>
-    </div>
-</header>
+  <footer class="pie">
+    <small>© Ministerio — Jesús es mi Pastor</small>
+  </footer>
+
+</body>
+</html>
