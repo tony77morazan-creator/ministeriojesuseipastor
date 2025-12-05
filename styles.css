@@ -45,7 +45,7 @@ body{
   justify-content:center;
   text-align:center;
   padding:120px 20px 60px;
-  background-image: url('hero-bg.jpg'); /* tu imagen de fondo */
+  imagen de fondo: URL('héroe-bg.PNG');
   background-size:cover;
   background-position:center;
   position:relative;
