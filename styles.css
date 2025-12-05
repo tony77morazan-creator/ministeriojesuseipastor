@@ -1,145 +1,101 @@
-/* Reset y tipografía */
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  background: linear-gradient(180deg,#071428 0%, #09243a 100%); /* suave degradado oscuro */
-  color:#E9F6FF; /* texto claro */
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* ENCABEZADO */
-.encabezamiento{
-  width:100%;
-  position:fixed;
-  top:0;
-  left:0;
-  z-index:100;
-  background: rgba(3,12,22,0.35); /* translucidez */
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  background: #0a1a2a; /* azul oscuro elegante */
+  color: #eef7ff; /* texto claro */
+}
+
+/* Encabezado */
+.encabezamiento {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(10, 30, 50, 0.7);
   backdrop-filter: blur(6px);
-  padding:12px 20px;
+  padding: 12px 20px;
 }
 
-.navbar{
-  max-width:1100px;
-  margin:0 auto;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+.navbar {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.logo-text{
-  font-weight:700;
-  letter-spacing:2px;
-  color:#9fd8ff; /* azul claro para logo textual */
-  font-size:20px;
+.logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #8fd8ff;
 }
 
-/* Menu */
-.menu{
-  list-style:none;
-  margin:0;
-  padding:0;
-  display:flex;
-  gap:22px;
-}
-.menu a{
-  color:#9fd8ff; /* azul claro */
-  text-decoration:none;
-  font-weight:600;
-  opacity:0.95;
-  font-size:15px;
-}
-.menu a:hover{ opacity:1; transform:translateY(-1px); }
-
-/* HERO (sección principal) - SIN IMAGEN */
-.hero{
-  min-height:72vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:160px 20px 60px; /* espacio para el header fijo */
-  position:relative;
-  /* usamos solo degradado de fondo del body; si quieres otro degradado local, descomenta: */
-  /* background: linear-gradient(180deg, rgba(9,36,58,0.6), rgba(3,12,22,0.6)); */
+/* Menú */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
-/* capa oscura para legibilidad (ya el body tiene degradado, esto es opcional) */
-.hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: linear-gradient(180deg, rgba(2,13,28,0.25), rgba(2,8,18,0.45));
-  z-index:1;
+.menu a {
+  color: #8fd8ff;
+  text-decoration: none;
+  font-weight: 600;
 }
 
-/* contenido del hero (encima de la capa) */
-.hero-contenido{
-  position:relative;
-  z-index:2;
-  max-width:1100px;
-  width:100%;
+.menu a:hover {
+  opacity: 0.7;
 }
 
-.hero h1{
-  font-size:56px;
-  line-height:1.02;
-  margin:0 0 14px;
-  color:#BFE9FF; /* azul suave, sin brillo */
-  font-weight:800;
-  letter-spacing:2px;
-  text-shadow:none; /* eliminar brillos */
+/* HERO */
+.hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 20px 40px;
 }
 
-/* párrafo principal */
-.lead{
-  margin:0 0 22px;
-  color: #D8F2FF;
-  font-size:18px;
-  opacity:0.95;
+.hero h1 {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 10px;
 }
 
-/* CTA simple (enlace, no botón azul grande) */
-.cta-line .cta-link{
-  display:inline-block;
-  color:#cfefff;
-  text-decoration:underline;
-  font-weight:700;
-  padding:8px 10px;
-  border-radius:6px;
-  background:transparent; /* sin color fuerte */
+.lead {
+  font-size: 18px;
+  opacity: 0.9;
+  margin-bottom: 20px;
 }
 
-/* Secciones interiores */
-.seccion{
-  max-width:1100px;
-  margin:40px auto;
-  padding:20px;
-  background: rgba(255,255,255,0.02);
-  border-radius:8px;
-  color:#E9F6FF;
+/* CTA */
+.cta-line a {
+  color: #cfffff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Secciones */
+.seccion {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 8px;
 }
 
 /* Footer */
-.pie{
-  text-align:center;
-  padding:30px 10px;
-  color:#9fcff0;
-  opacity:0.9;
-}
-
-/* Responsive */
-@media (max-width:900px){
-  .hero h1{ font-size:40px; }
-  .menu{ gap:12px; }
-  .navbar{ padding:0; }
-  .encabezamiento{ padding:10px 12px; }
-}
-@media (max-width:480px){
-  .hero{ padding:130px 14px 40px; }
-  .hero h1{ font-size:30px; }
-  .lead{ font-size:15px; }
-  .menu{ display:none; } /* ocultar menú en móvil (puedes implementar un boton hamburguesa luego) */
+.pie {
+  text-align: center;
+  padding: 30px 10px;
+  opacity: 0.6;
 }
